@@ -99,4 +99,99 @@ var a="It was a dark and stormy night ";
 var result=a.split(" ").filter((val,index)=>{
     return val !=="";
 });
+//console.log(result);
+
+/*10) double the even number  */
+
+var arr=[1,2,3,4,5,6,7,8,9,10];
+
+var result=arr.filter((val,index)=>{
+    return val%2==0;
+}).map((val,index)=>{
+    val= val * 2;
+    return val;
+});
+//console.log(result);
+
+/*11) Elements greater than 10  */
+
+var arr=[2,3,4,5,10,30,40,2,3,4,5];
+
+var rsult=arr.filter((val,index)=>{
+   return val > 10; 
+});
+//console.log(rsult);
+
+/*12) Employe salary greater than 50000  */
+var data=[
+    {
+        name:"Arslan Shakeel",
+        age: 28,
+        salary:80000
+    },
+    {
+        name:"Junaid",
+        age: 26,
+        salary:56000
+    },
+    {
+        name:"Usman",
+        age: 32,
+        salary:78000
+    },
+    {
+        name:"Naem",
+        age: 33,
+        salary:90000
+    },
+    {
+        name:"Khalid",
+        age: 55,
+        salary:56000
+    },
+    {
+        name:"Nouman",
+        age: 23,
+        salary:33000
+    },
+    {
+        name:"Saad",
+        age: 43,
+        salary:45000
+    },
+    {
+        name:"Raja Shaheen",
+        age: 28,
+        salary:90000
+    }
+];
+
+var result=data.filter((val,index)=>{
+    return val.salary > 50000;
+});
+//console.log(result);
+
+//* 13) return the employee with name Arslan Shakeel
+
+var result=data.filter((val,index)=>{
+    return val.name ==="Arslan Shakeel";
+});
+//console.log(result);
+
+//* 14) Employe with age greater than 30
+
+var result=data.filter((vak,index)=>{
+    return vak.age > 30;
+});
+//console.log(result);
+
+//* 15) Remove Duplicate item in an array
+
+var dub_array=[20,3,4,5,6,7,8,9,7,7,1,1,2,2,6,30,100];
+
+var result=dub_array.filter((val,index,source_array)=>{
+    
+    var b= source_array.indexOf(val)==index;
+    return b;
+});
 console.log(result);
